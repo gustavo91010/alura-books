@@ -1,0 +1,60 @@
+
+
+.cabecalho__menu-hamburger{
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*
+    O Width e o heigth seriam para posicionar o incone haburguer, mas os codigos:
+ background-repeat: no-repeat;
+    background-position: center;
+    fizeram o trabalho bem mas segugo
+
+    Dysplay inline-block para permitir o ajuste de largura e altura da imagem
+    */
+}
+.cabecalho{
+    background-color: var(--cor-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /*
+    position: ela subistituiu a imagem do menu na qual ela estava ao seu lado... 
+    la, naquela div temso 4 elementos...
+    o checkbox, a lista, o span e a imagem, esse possition relative, subistituiu a imagem ( que estava ao lado dela) pela re-vizualização da lista
+    O position absolute, fez com que os dois voltassem a coecistor,só que um sobre o outro dessa vez
+    position: relative;  libera a escolha de posicionamento do elemento (l, r, t ou b)
+
+    - esses dois:
+    position: absolute;
+    top: 100%; escolhemos onde por ja que o relative relativizou a oarada...xD
+        */
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__image{
+    padding: 0.5em;
+}
+.lista-menu{
+    display: none;
+}
+.container__botao:checked~.lista-menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+
+    /*
+    checked: vizualiza se o box la esta preenchido...
+    "se o botão estiver checked, ele vai procuraro outro que venha depois dele com a classe lista-menu e chamar o block para ele
+    Da una olhada la no html, a lista menu é filha da container__botao e nessa ultima temos um checkin, ele esta asociando esse checking a troca de classe de formatação pra tornar vizivel a lista que foi oculta anteriormente
+    
+    cara, ve la os comentarios na classe:  cabecalho
+    */
+}
