@@ -45,7 +45,9 @@
 
 .lista-menu {
     display: none;
-
+    position: absolute;
+    top: 100%;
+    width: 60vw;
     /*
     Esse daqui é quando o menu esta fecado, quando o hamburguer estiver aberto, é o de baixo quem manda...
     */
@@ -54,9 +56,7 @@
 
 .container__botao:checked~.lista-menu {
     display: block;
-    position: absolute;
-    top: 100%;
-    width: 60vw;
+   
 
     /*
     checked: vizualiza se o box la esta preenchido...
