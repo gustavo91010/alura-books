@@ -1,6 +1,4 @@
-
-
-.cabecalho__menu-hamburger{
+.cabecalho__menu-hamburger {
     width: 24px;
     height: 24px;
     background-image: url("../img/Menu.svg");
@@ -16,7 +14,8 @@
     Dysplay inline-block para permitir o ajuste de largura e altura da imagem
     */
 }
-.cabecalho{
+
+.cabecalho {
     background-color: var(--cor-branco);
     display: flex;
     justify-content: space-between;
@@ -34,21 +33,30 @@
     top: 100%; escolhemos onde por ja que o relative relativizou a oarada...xD
         */
 }
-.container{
+
+.container {
     display: flex;
     align-items: center;
 }
 
-.container__image{
+.container__image {
     padding: 0.5em;
 }
-.lista-menu{
+
+.lista-menu {
     display: none;
+
+    /*
+    Esse daqui é quando o menu esta fecado, quando o hamburguer estiver aberto, é o de baixo quem manda...
+    */
+   
 }
-.container__botao:checked~.lista-menu{
+
+.container__botao:checked~.lista-menu {
     display: block;
     position: absolute;
     top: 100%;
+    width: 60vw;
 
     /*
     checked: vizualiza se o box la esta preenchido...
@@ -56,5 +64,44 @@
     Da una olhada la no html, a lista menu é filha da container__botao e nessa ultima temos um checkin, ele esta asociando esse checking a troca de classe de formatação pra tornar vizivel a lista que foi oculta anteriormente
     
     cara, ve la os comentarios na classe:  cabecalho
+    o vw pega a largura da tela...
     */
+}
+
+.container__botao{
+    display: none;
+
+    /*
+    eu to ocultando o checkbox e nao to consegundo acessar ele...
+    */
+}
+
+.lista-menu__titlulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--cor-branco);
+
+}
+
+.lista-menu__titlulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+ 
+    /*
+    Setou a cor do fundo,
+    absorveu a cor do fundo...
+    deixou o texto transparente- eu acho... e trou o efeito do link (tag a)
+    - fixa a cor do backgruoun apenas onde tiver texto
+    mete um upercase no texto...
+    */
+
+
 }
