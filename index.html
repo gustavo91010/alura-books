@@ -11,12 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 
     <!--
         css: reset: https://meyerweb.com/eric/tools/css/reset/  resetar os estilos padrão dos navegadores, mantendo todos no mesma formatação, criar o arquivo reset.css
    
         https://www.figma.com/file/sSMbIqKaGBd66Y8roxTk2p/AluraBooks?type=design&node-id=126-4365&mode=design&t=9rIT3VzXexMFxUXd-0
+        iportar  carrocel:  https://swiperjs.com/get-started => Use Swiper from CDN
 
 -->
 </head>
@@ -32,30 +34,30 @@
         
             Obs: o check da classe lista-menu vai trabalha com a label, ja qu eela engloba tudo dentro dela... 
         -->
-        <label for="menu">
-            <span class="cabecalho__menu-hamburger container__image"></span>
-        </label>
+            <label for="menu">
+                <span class="cabecalho__menu-hamburger container__image"></span>
+            </label>
 
-           
-                <ul class="lista-menu">
-                    <li class="lista-menu__titlulo">Categoria</li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Progamação</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">FrontEnd</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Infra estrutura</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Busines</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Design & Ux</a>
-                    </li>
-                </ul>
-            
+
+            <ul class="lista-menu">
+                <li class="lista-menu__titlulo">Categoria</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Progamação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">FrontEnd</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infra estrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Busines</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & Ux</a>
+                </li>
+            </ul>
+
             <!--Na realidade, ele recebeu o incone do menu, os outros receberam pela tag a, que gera um link, o dele nao foi um link... Ainda nao entendio  por que o do span, parece que é pra deixar o incone flexivele  nao estatico, ja que nao vamos usar o javascript -->
 
             <img src="img/Logo.svg" alt="Logo do alura books" class="container__image">
@@ -68,11 +70,68 @@
         </div>
     </header>
 
-<section class="banner"> 
-    <h2 class="banner__title"> Já sabe por onde começar? </h2>
-    <p class="banner__texto"> Encontre em nossa estante o que precisa para seu desenvolvimenti!</p>
-    <input type="search" class="banner__pesquisa" placeholder="Qual será sua proxima leitura?"> <!-- placehouder é o texto padrão dentro do input que sobe quando a gente começa a escrever nele-->
-</section>
+    <section class="banner">
+        <h2 class="banner__title"> Já sabe por onde começar? </h2>
+        <p class="banner__texto"> Encontre em nossa estante o que precisa para seu desenvolvimenti!</p>
+        <input type="search" class="banner__pesquisa" placeholder="Qual será sua proxima leitura?">
+        <!-- placehouder é o texto padrão dentro do input que sobe quando a gente começa a escrever nele-->
+    </section>
+
+    <section class="carrocel">
+        <h2 class="carrocel__titulo">Novos lançamentos</h2>
+        <!-- Slider main container
+
+            
+            passo a passo:
+
+            No  https://swiperjs.com/get-started => Use Swiper from CDN
+
+        entrar no site, pegar o link, o script e o Add Swiper HTML Layout
+        depois, na pagina: 
+        https://swiperjs.com/swiper-api#initialize-swiper
+        procure por Initialize Swiper copie a criação da constante e cole dentro de um atag script auqi no html
+
+-->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+
+            <!-- If we need pagination  parece que é umas bolinhas... -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/Acessibilidade.png" alt="Lovro sobre acessibilidade"></div>
+                <div class="swiper-slide"><img src="img/Nodejs.png" alt="livro sobre node"></div>
+                <div class="swiper-slide"><img src="img/Liderança.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/ReactNative.png" alt=""></div>
+
+
+
+                ...
+            </div>
+
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar 
+            <div class="swiper-scrollbar"></div>
+            -->
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 10, // interavalo do espaço de um para outro
+            slidesPerView: 3, // para aparecer 3 imagens de uma só vez
+            pagination: { // aquelas bolinhas que aparece em baixo, pagination
+                el: '.swiper-pagination',
+                type: 'bullets',
+            }
+        });
+    </script>
 
 </body>
 

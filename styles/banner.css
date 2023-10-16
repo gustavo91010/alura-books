@@ -29,10 +29,11 @@
     font-size: 14px;
     font-weight: 400;
 
-    text-align: 'center';
+    text-align: center;
     color: var(--cor-branco);
     
     background: url('../img/lupinha.png')no-repeat;
-    background-position: 1em;
+    background-position: 1em ;
+  
 
 }
