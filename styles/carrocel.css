@@ -11,14 +11,111 @@
 .swiper-slide img {
     width: 100%;
 }
-.swiper-button-prev{
-display: none;
-}
-.swiper-button-next{
+
+.swiper-button-prev {
     display: none;
 }
 
-.swiper-pagination{
-    position: initial; /*Jogar as bolinhas pra cima*/
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    /*Jogar as bolinhas pra cima*/
     margin: 0.5em 0;
+}
+
+.card__descrição {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card__botões {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes {
+    display: flex;
+}
+
+.botoes__itens {
+    margin: 0 0.5em;
+}
+
+.botões__ancora {
+    background-color: var(--laranja);
+    padding: 1em 2.2em;
+    /*Lembrando que o padding define o tamanho do "box", do elemento, do centro a te a borda externa, e o margin define da borda externa ate o margin do proximo elemento*/
+    color: var(--cor-branco);
+    font-weight: 700;
+    text-decoration: none;
+
+
+}
+
+.card {
+    background: var(--cor-branco);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+
+}
+
+.descrição__title {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.descrição__title_book {
+    color: var(--cor-azul);
+    font-size: 18;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.descrição__text {
+    font-size: 14;
+    font-weight: 400;
+}
+
+.topicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    /* background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%); */
+    background: var(--azul-degrade);
+}
+
+.topicos__titulo {
+    color: var(--cor-branco);
+    margin: 1em;
+}
+
+.topicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.topicos__item {
+    display: flex;
+    margin: 1em;
+
+
+}
+
+.topicos__link {
+    color: var(--cor-branco);
+    background: var(--laranja);
+    padding: 1em;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
 }
