@@ -51,12 +51,12 @@
     /*
     Esse daqui é quando o menu esta fecado, quando o hamburguer estiver aberto, é o de baixo quem manda...
     */
-   
+
 }
 
 .container__botao:checked~.lista-menu {
     display: block;
-   
+
 
     /*
     checked: vizualiza se o box la esta preenchido...
@@ -68,7 +68,7 @@
     */
 }
 
-.container__botao{
+.container__botao {
     display: none;
 
     /*
@@ -89,12 +89,12 @@
 }
 
 .lista-menu__link {
-    background: var(--azul-degrade); 
+    background: var(--azul-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
- 
+
     /*
     Setou a cor do fundo,
     absorveu a cor do fundo...
@@ -102,6 +102,27 @@
     - fixa a cor do backgruoun apenas onde tiver texto
     mete um upercase no texto...
     */
+}
 
+.container__title {
+    display: none;
+}
 
+@media screen and (min-width: 1024px) {
+
+    .container__title,
+    .container__title__negrito {
+        display: block;
+        font-family: var(--font-secundaria);
+        font-size: 30px;
+        color: red;
+    }
+
+    .container__title {
+        font-weight: 400;
+    }
+
+    .container__title__negrito {
+        font-weight: 700;
+    }
 }
