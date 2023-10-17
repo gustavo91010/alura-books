@@ -111,7 +111,9 @@
 .opções {
     display: none;
 }
-
+.container__texto{
+    display: none;
+}
 @media screen and (min-width: 1024px) {
 
     .container__title,
@@ -167,4 +169,27 @@
         /* deixaro botão oculto mais ainda funcional... */
         display: none;
     }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__texto{
+        display: block;
+    }
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-preto);
+    }
+    .cabecalho{
+        padding: 0 2em;
+    }
+    .opções{
+        margin-right: auto;
+        /* auto, ele completa o lado com a margem, jogando os elementos para o lado oposto... se usar o left,
+        vai jogar os elementos para o left aumentando a margem do lado oposto
+        e se usar o margin somente, ele centraliza o elemento */
+
+    }
+    
 }
