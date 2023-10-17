@@ -108,6 +108,10 @@
     display: none;
 }
 
+.opções {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
 
     .container__title,
@@ -115,7 +119,7 @@
         display: block;
         font-family: var(--font-secundaria);
         font-size: 30px;
-        color: red;
+
     }
 
     .container__title {
@@ -124,5 +128,43 @@
 
     .container__title__negrito {
         font-weight: 700;
+    }
+
+    .opções {
+        display: flex;
+        color: red;
+
+    }
+
+    .opções__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opções__link {
+        text-decoration: none;
+        color: var(--cor-preto);
+
+    }
+
+    .container__image__transparente {
+        display: none;
+        /* para ocultar o coração que indica o favorito quando estivermos em uma resolução mairo, ja que ja temos o link para tal conteudo */
+    }
+
+    .cabecalho__menu-hamburger {
+        display: none;
+    }
+
+    /* configurar para mostrar a lista quando o :checkedfor selecionado ele acionar a classe lista menu*/
+    .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+        /* para ela ficar com tamanho justo em relação ao texto internoo, mas parece que só funciona legal de for com display block */
+
+    }
+    .opções__botão{
+        /* deixaro botão oculto mais ainda funcional... */
+        display: none;
     }
 }

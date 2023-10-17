@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 
@@ -62,16 +62,51 @@
             <!--Na realidade, ele recebeu o incone do menu, os outros receberam pela tag a, que gera um link, o dele nao foi um link... Ainda nao entendio  por que o do span, parece que é pra deixar o incone flexivele  nao estatico, ja que nao vamos usar o javascript -->
 
             <img src="img/Logo.svg" alt="Logo do alura books" class="container__image">
-            
+
             <h1 class="container__title">
                 <b class="container__title__negrito">Alura </b>
                 Books
             </h1>
+            <!-- <b>Alura</b> é uma tag que deixa a palavra em negrito. -->
+
             <!-- <h1 class="container__titulo"><b class="container__titulo--negrito">Alura</b>Books</h1> -->
         </div>
+        <ul class="opções">
+            <input type="checkbox" id="opções__menu" class="opções__botão">
+
+            <label for="opções__menu">
+
+                <li class="opções__item">Categorias</li>
+            </label>
+            <!-- estou repetinho aqui a parada de ocultar a lista atraz do hamburger, dessa vez quando eu clicar em categoria a lista aparecera -->
+
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Progamação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">FrontEnd</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infra estrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Busines</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & Ux</a>
+                </li>
+            </ul>
+
+            <li class="opções__item"> <a href="#" class="opções__link">Favoritos</a></li>
+            <li class="opções__item"> <a href="#" class="opções__link">Minha estante</a></li>
+
+        </ul>
+
 
         <div class="container">
-            <a href="#"><img src="img/Favoritos.svg" alt="Incone de favoritos" class="container__image"></a>
+            <a href="#"><img src="img/Favoritos.svg" alt="Incone de favoritos"
+                    class="container__image container__image__transparente"></a>
             <a href="#"><img src="img/Compras.svg" alt="Incode de compras" class="container__image"></a>
             <a href="#"><img src="img/Usuário.svg" alt="Incone do usuarios" class="container__image"></a>
         </div>
@@ -237,15 +272,97 @@
     </section>
 
     <section class="contato">
-        <h2 class="contato__title">Fique por dentro das novidades!</h2>
-        <p class="contato__texto">Aualizações de e-books, novos livros, pormoções e outros.</p>
+        <div class="contato__descrição">
+
+            <h2 class="contato__title">Fique por dentro das novidades!</h2>
+            <p class="contato__texto">Aualizações de e-books, novos livros, pormoções e outros.</p>
+        </div>
+
         <input type="email" placeholder="Cadastre seu email" class="contato__email">
     </section>
 
     <hr /> <!--  cira uma linha divisoaira... -->
-    <h2 class="rodapé">
+    <div></div>
+    <div class="rodapé">
+
         <h2 class="rodapé__title">Grupo Alura</h2>
-    </h2>
+       
+       
+       
+       
+        <ul class="lista__rodapé">
+            <li class="lista__rodapé__titulo">Educação</li>
+            
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 126.svg" alt="Casa do codigo">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 1261.svg" alt="Caelum">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+        </ul>
+
+        <ul class="lista__rodapé">
+            <li class="lista__rodapé__titulo">Educação Online</li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 127.svg" alt="Alura para Empresas">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 1311.svg" alt="Alura Latam">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 128.svg" alt="Alura Lingua">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 1281.svg" alt="Alura Start">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 129.svg" alt="Music Dot>">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 1291.svg" alt="PM3">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+        </ul>
+
+        <ul class="lista__rodapé">
+            <li class="lista__rodapé__titulo">Comunidade</li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 131.svg" alt="Hipster">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Scuba.svg" alt="scuba">
+                <a href="#" class="lista__rodapé__link">Scuba</a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 130.svg" alt="layers ponto tech">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 1301.svg" alt="Like a boss">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 131.svg" alt="carreira sem fronteira">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 132.svg" alt="hipsters ponto job">
+                <a href="#" class="lista__rodapé__link"></a>
+            </li>
+            <li class="lista__rodapé__item">
+                <img src="img/footer/Frame 1321.svg" alt="GUJ">
+                <a href="#" class="lista__rodapé__link">GUJ</a>
+            </li>
+        </ul>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
